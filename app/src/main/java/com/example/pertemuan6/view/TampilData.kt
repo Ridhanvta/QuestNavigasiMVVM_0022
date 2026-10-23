@@ -2,6 +2,8 @@ package com.example.pertemuan6.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -15,6 +17,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pertemuan6.R
 
@@ -43,12 +48,13 @@ fun TampilData(
                 items.forEach { item ->
                     Column {
                         Text(item.first.uppercase(), fontSize = 16.sp)
-                        Text(text = item.second, modifier = Modifier.padding(
-                            horizontal = dimensionResource(id = R.dimen.padding_small)
-                        ))
+                        Text(text = item.second, fontWeight = FontWeight.Bold,
+                            fontFamily = FontFamily.Cursive, fontSize = 22.sp)
                     }
                     HorizontalDivider(thickness = dimensionResource(R.dimen.thickness_divider))
                 }
+                Spacer(modifier = Modifier.height(10.dp))
+
             }
         }
     }
