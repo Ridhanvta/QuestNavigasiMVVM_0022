@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.sp
 import com.example.pertemuan6.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,7 +42,7 @@ fun TampilData(
             {
                 items.forEach { item ->
                     Column {
-                        Text(item.first.uppercase())
+                        Text(item.first.uppercase(), fontSize = 16.sp)
                         Text(text = item.second, modifier = Modifier.padding(
                             horizontal = dimensionResource(id = R.dimen.padding_small)
                         ))
